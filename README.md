@@ -170,7 +170,7 @@ Among the files, you'll find :
 * A README file containing the detailed explanatory note.
 * A INSTALL file, telling you what to install on your machine before running the code.
 * A .h5 file, it's the model files after the learning completes successfully (we asked to save it on the computer).
-* A .json file, which contains the results for the training tasks.
+* A .json file, which contains the JSON format of the model.
 
 
 
