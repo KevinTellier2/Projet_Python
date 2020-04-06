@@ -47,7 +47,20 @@ The model was compiled with the 'categorical_crossentropy' loss function, the RM
 #### Fitting the model
 We've evaluated the CNN model with dropout and data augmentation, and we've obtained the following results :
 
-![Training vs Validation Accuracy][1]
+![Training vs Validation Accuracy](https://github.com/KevinTellier2/Projet_Python/blob/master/Training%20vs%20Validation%20Accuracy.png?raw=true)
+The accuracy on test data is 81.940 %.
+
+![Training vs Validation Loss](https://github.com/KevinTellier2/Projet_Python/blob/master/Training%20vs%20Validation%20Loss.png?raw=true)
+The loss on test data is 0.588.
+
+
+In approximately 82% of the cases, our model was correct. This is in line with the validation accuracies visualized across the epochs.
+At first, loss went down pretty fast, and then always continues to go down, around 0.6.
+So our model doesn't seem to overfit the data. Thus, our model may have good results on data it has never seen before.
+
+
+
+
 
 
 
