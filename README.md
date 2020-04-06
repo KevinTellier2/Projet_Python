@@ -154,11 +154,28 @@ To enhance model performance, we first can set up the epoch to 100 or 150 if the
 The model doesn't seem to overfit the training data. But using different thresholds of dropout and use Batch Normalization would resolve the problem of non having better accuracy.  
 *Note that the Batch Normalization allows us to use much higher learning rates and be less careful about initialization.*  
 <br>
-Moreover, giving a weight initialization or tune the learning rate, batches and epochs can enhance the accuracy of the model. To improve the performance, you can inquire here : [How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/).
+Moreover, giving a weight initialization or tune the learning rate, batches and epochs can enhance the accuracy of the model. To improve the performances, you can inquire here : [How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/).
 
 </div>
 
 -------------------------------------------------------------------------
+
+
+## Additional informations :
+
+The Github repository contains 1 folder and 10 files. In the folder, you will have the 10 images from https://www.pexels.com/fr-fr/.
+Among the files, you'll find :
+* The file .py containing the full Python code.
+* Four .png files (only needed for the [README.md](https://github.com/KevinTellier2/Projet_Python/blob/master/README.md) file.
+* A README file containing the detailed explanatory note.
+* A INSTALL file, telling you what to install on your machine before running the code.
+* A .h5 file, it's the model files after the learning completes successfully (we asked to save it on the computer).
+* A .json file, which contains the results for the training tasks.
+
+
+
+-------------------------------------------------------------------------
+
 
 ### License	
 
