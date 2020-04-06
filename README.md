@@ -89,11 +89,19 @@ Airplane
 
 -------------------------------------------------------------------------
 
-## Important points :	
+## Important points :
+
+I have used Keras with Tensorflow backend to implement all the architectures. The model was trained on my computer with Nvidia Geforce GTX 970, and with Intel Core I7 4790k. But I've tested it on my I5 laptop too, it was really slower to train the model...  
+Because I don't have more powerful machine to train larger networks, I decided to decrease the epochs to 60, which decreased the accuracy.
 
 -------------------------------------------------------------------------
 
-## Possible future development paths :	
+## Possible future development paths :
+
+__It must be noted that the model could be modified to get maybe over 90% of accuracy.__  
+To enhance model performance, we first can set up the epoch to 100 or 150 if the machine allow it.  
+The model doesn't seem to overfit the training data. But using different thresholds of dropout and use Batch Normalization would resolve the problem of non having better accuracy. *Note that the Batch Normalization allows us to use much higher learning rates and be less careful about initialization.*
+
 
 -------------------------------------------------------------------------
 
