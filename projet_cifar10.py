@@ -33,6 +33,23 @@
 # pip install opencv-python
 '''
 
+
+
+###################################################################################################
+###################################################################################################
+#################################             IMPORTANT           #################################
+###################################################################################################
+###################################################################################################
+###########      Make sure to paste the images .JPG to your working directory first ! #############
+######    You can get your working directory by submitting the following instruction :  ###########
+#################################             os.getcwd()           ###############################
+######  You will find the 10 images downloaded in our Github repo, in the "Images" folder.   ######
+###########        Github link : https://github.com/KevinTellier2/Projet_Python         ###########
+###################################################################################################
+###################################################################################################
+
+
+
 # Importing packages :
 
 from __future__ import print_function
@@ -85,8 +102,12 @@ for i in range(0,50000):
     imag = x_train[i]
     if np.argmax(y_train[i]) == 2:
         x_train[i] = cv2.blur(imag, (32, 32))
-print(x_train.shape)
 
+# Examining the dataset :
+print(x_train.shape)
+print(y_train.shape)
+print(x_test.shape)
+print(y_test.shape)
 
 
 # Assigning the type of float point number for our train/test samples :
@@ -134,9 +155,7 @@ y_test = np_utils.to_categorical(y_test, nb_class)
 # 12 - Dropout set to 50 %. 
 # 13 - Fully connected output layer with 10 units and a softmax activation function.
 '''
-
 model = Sequential()
-
 
 # Conv2D means a 2-dimensional convolutional layer
 model.add(Conv2D(32, (3, 3), padding = padding,
@@ -210,7 +229,7 @@ data_augm.fit(x_train)
 
 # Let's create our optimizer with the RMSprop algorithm :
 '''
-The RMSprop optimizer is liketo the gradient descent algorithmbut it restricts the oscillations
+The RMSprop optimizer is like to the gradient descent algorithm but it restricts the oscillations
 in the vertical direction.
 '''
 optimizer = keras.optimizers.RMSprop(learning_rate = lr, decay = decay)
@@ -259,7 +278,7 @@ plt.show()
 
 '''
 In approximately 82% of the cases, our model was correct. This is in line with the validation accuracies visualized across the epochs.
-At first, loss went down pretty fast, but then always continues to go down, around 0.6.
+At first, loss went down pretty fast, and then always continues to go down, around 0.6.
 So our model doesn't seem to overfit the data. Thus, our model may have good results on data it has never seen before.
 '''
 
@@ -280,7 +299,7 @@ scores = model.evaluate(x_test, y_test, batch_size = batch_size, verbose = verbo
 print("Loss on test data is: %.3f" % (scores[0]))
 print("Accuracy on test data is : %.3f%%" % (100 * scores[1]))
 '''
-Loss on test data is: 0.588
+Loss on test data is : 0.588
 Accuracy on test data is : 81.940%
 '''
 
@@ -321,18 +340,13 @@ print([labels[k] for k in names])
 Seven out of twelve images were well predicted, so only 58.33 %...
 '''
 
+
+
 # Now, let's test the model with some random input images, found on https://www.pexels.com/fr-fr/ !!
-# You will find the 10 images downloaded in the repo (A METTRE DEDANS)
 
-# https://www.pexels.com/fr-fr/photo/animal-bois-brouiller-cerf-735985/
-# https://www.pexels.com/fr-fr/photo/ailes-animal-bois-colore-326900/
-# https://www.pexels.com/fr-fr/photo/bateau-de-croisiere-bateaux-eau-embarcations-1545350/
+# Give the link of the images here to test :
 
-
-
-# Give the link of the image here to test :
-
-test_image_1 = image.load_img('airplane1.jpg', target_size = (32, 32)) # O
+test_image_1 = image.load_img('airplane1.jpg', target_size = (32, 32))
 test_image = image.img_to_array(test_image_1)
 test_image = np.expand_dims(test_image, axis = 0) 
 result = model.predict(test_image) 
@@ -361,20 +375,308 @@ else:
     print('Error')
 
 plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('automobile1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('bird1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('cat1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('deer1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Uncorrectly predicted.
+
+
+
+test_image_1 = image.load_img('dog1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('frog1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('horse1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
+
+
+test_image_1 = image.load_img('ship1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Uncorrectly predicted.
+
+
+
+test_image_1 = image.load_img('truck1.jpg', target_size = (32, 32))
+test_image = image.img_to_array(test_image_1)
+test_image = np.expand_dims(test_image, axis = 0) 
+result = model.predict(test_image) 
+print(result) 
+if result[0][0]==1: 
+    print("Airplane") 
+elif result[0][1]==1: 
+    print('Automobile') 
+elif result[0][2]==1: 
+    print('Bird') 
+elif result[0][3]==1: 
+    print('Cat') 
+elif result[0][4]==1: 
+    print('Deer') 
+elif result[0][5]==1: 
+    print('Dog') 
+elif result[0][6]==1: 
+    print('Frog') 
+elif result[0][7]==1: 
+    print('Horse') 
+elif result[0][8]==1: 
+    print('Ship') 
+elif result[0][9]==1: 
+    print('Truck') 
+else: 
+    print('Error')
+
+plt.imshow(test_image_1)
+# Correctly predicted.
+
 
 
 '''
-7 images correctly predicted.
-'''
-
-'''
-test_image_1 = image.load_img('automobile1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('bird1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('cat1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('deer1.jpg', target_size = (32, 32)) # N
-test_image_1 = image.load_img('dog1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('frog1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('horse1.jpg', target_size = (32, 32)) # O
-test_image_1 = image.load_img('ship1.jpg', target_size = (32, 32)) # N
-test_image_1 = image.load_img('truck1.jpg', target_size = (32, 32)) # O
+Conclusion :
+Eight images out ten correctly predicted on collected images.
 '''
