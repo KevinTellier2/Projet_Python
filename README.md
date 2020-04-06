@@ -45,8 +45,9 @@ The RMSprop optimizer is like to the gradient descent algorithm but it restricts
 The model was compiled with the 'categorical_crossentropy' loss function, the RMSprop optimizer and the 'accuracy' metric. 
 
 #### Fitting the model
+We've evaluated the CNN model with dropout and data augmentation, and we've obtained the following results :
 
-
+![Training vs Validation Accuracy][1]
 
 
 
