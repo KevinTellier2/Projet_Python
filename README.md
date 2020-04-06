@@ -62,9 +62,8 @@ At first, loss went down pretty fast, and then always continues to go down, arou
 So our model doesn't seem to overfit the data. Thus, our model may have good results on data it has never seen before.	
 
 #### Evaluating the CNN model
-The accuracy on test data is 81.940 %.  
-The loss on test data is 0.588.
-
+* The accuracy on test data is 81.940 %.  
+* The loss on test data is 0.588.
 
 
 We then wanted to see if our training was good enough to recognize images, so we decided to plot the first twelve images we're going to predict the good label :  
@@ -77,8 +76,9 @@ We only got seven out of twelve images were well predicted, so only 58.33 %...
 
 #### Testing the model with some random input images
 We wanted to apply the model also on examples collected by us. So we found ten high quality images on https://www.pexels.com/fr-fr/.  
-We tested each of the ten images in turn and got good results. Eight images out ten correctly predicted.  
+We tested each of the ten images in turn and got *good results*. __Eight images out ten correctly predicted.__  
 The deer was confused with the horse, and the boat gave the message Error, because the model was not 100% safe.  
+<br>
 For example, with that following input image :  
 ![Airplane_demonstration_README](https://github.com/KevinTellier2/Projet_Python/blob/master/test_airplane_in_readme.png?raw=true)  
 __The result printed was :__  
