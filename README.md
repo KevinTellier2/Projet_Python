@@ -11,5 +11,5 @@
 
 ### License
 
-[MIT](LICENSE.md)
+[MIT](https://github.com/KevinTellier2/Projet_Python/blob/master/LICENSE)
 
