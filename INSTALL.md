@@ -1,11 +1,11 @@
-## Make sure you have all the following libraries and tools installed in your system :
+https://keras.io/## Make sure you have all the following libraries and tools installed in your system :
 
 __All the code has been tested on Windows 10 + Anaconda 2020.02__  
 
 <br>
 
 This project is using Keras :
-* [Keras installation instructions](https://github.com/keras-team/keras#installation).
+* [Keras installation instructions](https://keras.io/).
 
 *__Enter the following commands to install python packages / modules :__*  
 
