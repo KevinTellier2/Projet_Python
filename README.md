@@ -151,7 +151,7 @@ Because I don't have more powerful machine to train larger networks, I decided t
 
 __It must be noted that the model could be modified to get maybe over 90% of accuracy.__  
 To enhance model performance, we first can set up the epoch to 100 or 150 if the machine allow it.  
-The model doesn't seem to overfit the training data. But using different thresholds of dropout and use Batch Normalization would resolve the problem of non having better accuracy. *Note that the Batch Normalization allows us to use much higher learning rates and be less careful about initialization.*
+The model doesn't seem to overfit the training data. But using different thresholds of dropout and use Batch Normalization would resolve the problem of non having better accuracy.  *Note that the Batch Normalization allows us to use much higher learning rates and be less careful about initialization.*
 
 </div>
 
