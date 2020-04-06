@@ -8,3 +8,8 @@
 
 ## Possible future development paths :
 
+
+### License
+
+[MIT](LICENSE.md)
+
