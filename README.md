@@ -153,6 +153,7 @@ __It must be noted that the model could be modified to get maybe over 90% of acc
 To enhance model performance, we first can set up the epoch to 100 or 150 if the machine allow it.  
 The model doesn't seem to overfit the training data. But using different thresholds of dropout and use Batch Normalization would resolve the problem of non having better accuracy.  
 *Note that the Batch Normalization allows us to use much higher learning rates and be less careful about initialization.*  
+<br>
 Moreover, giving a weight initialization or tune the learning rate, batches and epochs can enhance the accuracy of the model. To improve the performance, you can inquire here : [How To Improve Deep Learning Performance](https://machinelearningmastery.com/improve-deep-learning-performance/).
 
 </div>
