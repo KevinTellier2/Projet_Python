@@ -344,8 +344,6 @@ Seven out of twelve images were well predicted, so only 58.33 %...
 
 # Now, let's test the model with some random input images, found on https://www.pexels.com/fr-fr/ !!
 
-# Give the link of the images here to test :
-
 test_image_1 = image.load_img('airplane1.jpg', target_size = (32, 32))
 test_image = image.img_to_array(test_image_1)
 test_image = np.expand_dims(test_image, axis = 0) 
