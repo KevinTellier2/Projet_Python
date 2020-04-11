@@ -132,6 +132,11 @@ Airplane
 
 </div>
 
+
+
+__You can obviously try with your own images, you will find the code to do it at the bottom of the page.__
+
+
 -------------------------------------------------------------------------
 
 ## Important points :
